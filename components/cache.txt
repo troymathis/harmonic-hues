@@ -1,0 +1,93 @@
+<Image
+            src="https://i.imgur.com/CPkIvjX.jpg"
+            priority
+            alt="tdub"
+            quality={100}
+            width={555}
+            height={300}
+          />
+          <Image
+            src="https://i.imgur.com/4qImwfJ.jpg"
+            priority
+            alt="lucas"
+            quality={100}
+            width={400}
+            height={300}
+          />
+          <Image
+            src="https://i.imgur.com/QGyefVC.jpg"
+            priority
+            alt="andrea"
+            quality={100}
+            width={300}
+            height={300}
+          />
+          <Image
+            src="https://i.imgur.com/FDOYGqq.jpg"
+            priority
+            alt="abigail"
+            quality={100}
+            width={300}
+            height={300}
+          />
+
+
+
+          
+
+
+
+
+
+
+
+          <Image
+          src="https://i.imgur.com/6XoPrfE.jpg"
+          priority
+          alt="iketem"
+          quality={100}
+          width={300}
+          height={300}
+        />
+        <Image
+          src="https://i.imgur.com/mj70fQa.jpg"
+          priority
+          alt="champloo"
+          quality={100}
+          width={300}
+          height={300}
+        />
+        
+        
+        <Image
+          src="https://i.imgur.com/ZhN1QJF.jpg"
+          priority
+          alt="porsche"
+          quality={100}
+          width={300}
+          height={300}
+        />
+        <Image
+          src="https://i.imgur.com/3e7Wj9v.jpg"
+          priority
+          alt="n+a"
+          quality={100}
+          width={475}
+          height={300}
+        />
+        <Image
+          src="https://i.imgur.com/1xQulxj.jpg"
+          priority
+          alt="robert"
+          quality={100}
+          width={300}
+          height={300}
+        />
+        <Image
+          src="https://i.imgur.com/I0VhYA9.jpg"
+          priority
+          alt="g+k"
+          quality={100}
+          width={550}
+          height={300}
+        />

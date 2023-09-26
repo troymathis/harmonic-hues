@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+  }
+  body {
+    overflow-y: visible;
+    position: relative;
+    overflow-x: hidden;
+  }
+  html,
+  body {
+    margin: 0;
+  }
