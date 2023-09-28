@@ -21,7 +21,7 @@ export const EmblaCarousel = ({children}: Props) => {
 const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [Autoplay(AUTOPLAYOPTIONS)])
 
   return (
-    <div  className="embla overflow-hidden h-full w-full fixed top-0 left-0 opacity-30 z-10"  ref={emblaRef} data-scroll data-scroll-speed="0.1">
+    <div  className="embla overflow-hidden h-full w-full fixed top-0 left-0 opacity-30 z-10"  ref={emblaRef}>
       <div className='flex'>{children}</div>
     </div>
   )
