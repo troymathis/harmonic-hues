@@ -39,6 +39,26 @@ export const portImg = {
         width: 385,
         height: 540
     },
+    extporsche: {
+      src: "https://i.imgur.com/ZhN1QJF.jpg",
+      width: 432,
+      height: 540
+    },
+    lambo: {
+      src: "https://i.imgur.com/cBWfYwH.jpg",
+      width: 406,
+      height: 540,
+    },
+    racecar: {
+      src: "https://i.imgur.com/wj47xuV.jpg",
+      width: 675,
+      height: 540,
+    },
+    lambodoor: {
+      src: "https://i.imgur.com/JXlIMnl.jpg",
+      width: 406,
+      height: 540,
+    }
     
 }
 

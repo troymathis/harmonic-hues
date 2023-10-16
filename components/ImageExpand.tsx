@@ -36,8 +36,8 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
             priority
             alt={src}
             quality={100}
-            width={width*1.5}
-            height={height*1.5}
+            width={width}
+            height={height}
             className="scale-[1.5] w-full h-auto"
           />
         </DialogDescription>

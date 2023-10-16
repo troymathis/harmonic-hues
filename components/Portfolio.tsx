@@ -8,14 +8,15 @@ import LargeHeading from "./PhotoHeading";
 import FP from "../public/FeelPowerfulCurved.png";
 import { portImg } from "@/public/assets/PortfolioImages";
 import ImageExpand from "./ImageExpand";
-import { Charm } from "next/font/google";
+import { Mate_SC } from "next/font/google";
 import { cn } from "@/lib/utils";
+import SplitType from 'split-type'
 
 interface PortfolioProps {}
 
 gsap.registerPlugin(ScrollTrigger);
 
-const charm = Charm({ weight: "400", subsets: ["latin"] });
+const abril = Mate_SC({ weight: "400", subsets: ["latin"] });
 
 const Portfolio: FC<PortfolioProps> = ({}) => {
   const component = useRef(null);
@@ -47,7 +48,11 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
       t.iteration(1000);
 
       const speedFactor = 1.4;
-      let tl;
+      let tl: any;
+      let loveWhat = new SplitType('.love-what', { types: 'chars' })
+      const lwChars = loveWhat.chars
+      let youDo = new SplitType('.you-do', { types: 'chars' })
+      const ydChars = youDo.chars
 
       var rotate = gsap.timeline({
         scrollTrigger: {
@@ -62,7 +67,58 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
           },
         },
       });
-
+      gsap.fromTo(
+        lwChars,
+        { 
+          y: 100,
+          opacity: 0
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 2,
+          ease: 'power4.out',
+          scrollTrigger: {
+            trigger: ".portfolio",
+            start: "+=5000",
+            end: "+=2500",
+            toggleActions: "play reverse play play",
+            id: "10",
+          },
+        },
+      )
+      gsap.fromTo(
+        ydChars,
+        { 
+          y: 100,
+          opacity: 0
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.05,
+          ease: 'power4.out',
+          scrollTrigger: {
+            trigger: ".portfolio",
+            start: "+=6750",
+            end: "+=2250",
+            toggleActions: "play reverse play play",
+            id: "10",
+          },
+        },
+      );
+      gsap.to(".curved-fp", {
+        opacity: 0,
+        ease: "power1.in",
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=2000",
+          end: '+=2400',
+          scrub: true,
+          id: "1",
+        },
+      });
       gsap.to(".box-2", {
         x: -1900,
         opacity: 0,
@@ -145,8 +201,8 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
-          start: "+=2900",
-          end: "+=2950",
+          start: "+=1650",
+          end: "+=1675",
           toggleActions: "play reverse play play",
           id: "7",
         },
@@ -158,8 +214,8 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
-          start: "+=3000",
-          end: "+=3050",
+          start: "+=2000",
+          end: "+=1500",
           toggleActions: "play reverse play play",
           id: "8",
         },
@@ -172,7 +228,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         scrollTrigger: {
           trigger: ".portfolio",
           start: "+=2550",
-          end: "+=2575",
+          end: "+=1500",
           toggleActions: "play reverse play play",
           id: "9",
         },
@@ -184,8 +240,60 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
-          start: "+=3050",
-          end: "+=3075",
+          start: "+=2575",
+          end: "+=2000",
+          toggleActions: "play reverse play play",
+          id: "10",
+        },
+      });
+      gsap.to(".box-11", {
+        y:-100,
+        opacity: 1,
+        ease: "elastic.out(1, 0.3)",
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=5250",
+          end: "+=2750",
+          toggleActions: "play reverse play play",
+          id: "10",
+        },
+      });
+      gsap.to(".box-12", {
+        y:-100,
+        opacity: 1,
+        ease: "elastic.out(1, 0.3)",
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=5375",
+          end: "+=2750",
+          toggleActions: "play reverse play play",
+          id: "10",
+        },
+      });
+      gsap.to(".box-13", {
+        y:-100,
+        opacity: 1,
+        ease: "elastic.out(1, 0.3)",
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=6650",
+          end: "+=1250",
+          toggleActions: "play reverse play play",
+          id: "10",
+        },
+      });
+      gsap.to(".box-14", {
+        y:-100,
+        opacity: 1,
+        ease: "elastic.out(1, 0.3)",
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=6750",
+          end: "+=1250",
           toggleActions: "play reverse play play",
           id: "10",
         },
@@ -282,9 +390,42 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
             </div>
           </div>
         </div>
-        <div className="panel orange bg-sky-200 w-[100vw] h-[100vh]">
-          <LargeHeading className={cn(charm.className, 'text-6xl')}>LOVE WHAT</LargeHeading>
-          <LargeHeading className={cn(charm.className)}>YOU DO</LargeHeading>
+        <div className="panel orange w-[100vw] h-[100vh]">
+          <div className="absolute h-screen w-full flex top-[15%] mx-16">
+          <LargeHeading size='photo' className={cn(abril.className, 'love-what relative overflow-hidden text-[10rem] bottom-[10%]')}>LOVE WHAT</LargeHeading>
+          <LargeHeading size='photo' className={cn(abril.className, 'you-do relative overflow-hidden text-[10rem] top-[60%] ')}>YOU DO</LargeHeading>
+          </div>
+          <div className="w-full h-screen mt-16 mx-12 gap-4">
+            {/* PLACEHOLDERS */}
+            <div className="box-11 opacity-0 absolute left-[25%] top-[45%]">
+              <ImageExpand
+                src={portImg.extporsche.src}
+                width={portImg.extporsche.width}
+                height={portImg.extporsche.height}
+              />
+            </div>
+            <div className="box-12 opacity-0 absolute top-1/2 left-[3%]">
+              <ImageExpand
+                src={portImg.lambo.src}
+                width={portImg.lambo.width}
+                height={portImg.lambo.height}
+              />
+            </div>
+            <div className="box-13 opacity-0 absolute left-[75%] top-[15%]">
+              <ImageExpand
+                src={portImg.lambodoor.src}
+                width={portImg.lambodoor.width}
+                height={portImg.lambodoor.height}
+              />
+            </div>
+            <div className="box-14 opacity-0 absolute left-[42%] top-[35%] scale-[.8]">
+              <ImageExpand
+                src={portImg.racecar.src}
+                width={portImg.racecar.width}
+                height={portImg.racecar.height}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

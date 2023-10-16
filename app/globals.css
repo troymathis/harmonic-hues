@@ -6,7 +6,6 @@ html {
     overflow-y: scroll;
     height: 100%;
     -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
   }
   body {
     overflow-y: visible;
@@ -17,3 +16,4 @@ html {
   body {
     margin: 0;
   }
+
