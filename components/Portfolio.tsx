@@ -277,7 +277,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         scrollTrigger: {
           trigger: ".portfolio",
           start: "+=2575",
-          end: "+=1000",
+          end: "+=1500",
           toggleActions: "play reverse play play",
           id: "10",
         },
@@ -290,7 +290,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         scrollTrigger: {
           trigger: ".portfolio",
           start: "+=4000",
-          end: "+=1000",
+          end: "+=1500",
           toggleActions: "play reverse play play",
           id: "10",
         },
@@ -328,10 +328,62 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
-          start: "+=4750",
+          start: "+=4350",
           end: "+=1250",
           toggleActions: "play reverse play play",
           id: "10",
+        },
+      });
+      gsap.to(".box-15", {
+        y: 100,
+        opacity: 1,
+        ease: "elastic.out(1,0.3)",
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=7900",
+          end: "+=1750",
+          toggleActions: "play reverse play play",
+          id: "3",
+        },
+      });
+      gsap.to(".box-16", {
+        y: 100,
+        opacity: 1,
+        ease: "elastic.out(1,0.3)",
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=6900",
+          end: "+=2500",
+          toggleActions: "play reverse play play",
+          id: "3",
+        },
+      });
+      gsap.to(".box-17", {
+        y: 100,
+        opacity: 1,
+        ease: "elastic.out(1,0.3)",
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=6750",
+          end: "+=2500",
+          toggleActions: "play reverse play play",
+          id: "3",
+        },
+      });
+      gsap.to(".box-18", {
+        y: 100,
+        opacity: 1,
+        ease: "elastic.out(1,0.3)",
+        duration: 2.5,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=7100",
+          end: "+=2500",
+          toggleActions: "play reverse play play",
+          id: "3",
         },
       });
     }, component);
@@ -339,7 +391,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
   });
 
   return (
-    <div className="portfolio z-20" ref={component}>
+    <div className="portfolio z-20 hidden xl:inline" ref={component}>
       <div ref={slider} className="flex flex-wrap w-[500vw] h-[100vh]">
         <div className="description panel blue w-[100vw] h-[100vh]">
           <div className="h-full w-full p-12 flex flex-col -z-10 absolute">
@@ -487,30 +539,30 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
               LOVE
             </LargeHeading>
           </div>
-          <div className="w-full h-screen relative">
+          <div className="w-full h-screen">
             {/* PLACEHOLDERS */}
-            <div className="absolute top-1/4 left-[30%]">
+            <div className="box-15 opacity-0 absolute top-[20%] left-[30%]">
               <ImageExpand
                 src={portImg.puppies.src}
                 width={portImg.puppies.width}
                 height={portImg.puppies.height}
               />
             </div>
-            <div className="absolute scale-90 left-[65%] top-[35%]">
+            <div className="box-16 opacity-0 absolute scale-90 left-[65%] top-[25%]">
               <ImageExpand
                 src={portImg.momo.src}
                 width={portImg.momo.width}
                 height={portImg.momo.height}
               />
             </div>
-            <div className="absolute scale-75 top-[13%] left-[3%]">
+            <div className="box-17 opacity-0 absolute scale-75 top-[2%] left-[1%]">
               <ImageExpand
                 src={portImg.doodle.src}
                 width={portImg.doodle.width}
                 height={portImg.doodle.height}
               />
             </div>
-            <div className="absolute top-1/2 scale-75">
+            <div className="box-18 opacity-0 absolute top-[40%] scale-75">
               <ImageExpand
                 src={portImg.bagel.src}
                 width={portImg.bagel.width}

@@ -19,7 +19,7 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
   if(width < 400) {
     return (
       <Dialog>
-        <DialogTrigger className={cn("hover:opacity-80 transition-all", className)}>
+        <DialogTrigger className={cn("hover:opacity-80 transition-all relative", className)}>
           <Image
             src={src}
             priority
@@ -27,7 +27,6 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
             quality={100}
             width={width}
             height={height}
-  
           />
         </DialogTrigger>
         <DialogContent>
@@ -39,13 +38,13 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
               quality={100}
               width={width}
               height={height}
-              className="scale-[1.5] w-full h-auto"
+              className="xl:scale-[1.5] w-full h-auto"
             />
           </DialogDescription>
         </DialogContent>
       </Dialog>
     )
-  } else {
+  } {
     return (
       <Dialog>
         <DialogTrigger className={cn("hover:opacity-80 transition-all", className)}>
@@ -68,7 +67,7 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
               quality={100}
               width={width}
               height={height}
-              className="scale-[2] w-full h-auto"
+              className="xl:scale-[2] w-full h-auto"
             />
           </DialogDescription>
         </DialogContent>

@@ -66,7 +66,7 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
         ))}
         <ThemeToggle />
       </div>
-      <div className="md:hidden flex fixed z-10 justify-center w-full">
+      <div className="md:hidden flex fixed z-20 justify-center w-full">
         <MobileSidebar navigation={navBarEls} />
       </div>
     </div>

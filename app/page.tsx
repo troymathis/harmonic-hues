@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
+import MobilePortfolio from "@/components/MobilePortfolio";
 
 export default function Home() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function Home() {
         <Welcome slides={slides} />
       </div>
       <Portfolio data-scroll-container/>
+      <MobilePortfolio />
       <div
         className="bg-orange-500 h-screen"
         id="photoshoot"
