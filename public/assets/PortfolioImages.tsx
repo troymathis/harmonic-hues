@@ -58,7 +58,28 @@ export const portImg = {
       src: "https://i.imgur.com/JXlIMnl.jpg",
       width: 406,
       height: 540,
+    },
+    puppies: {
+      src: "https://i.imgur.com/BpybPFM.jpg",
+      width: 720,
+      height: 480
+    },
+    doodle: {
+      src: "https://i.imgur.com/jy71OSL.jpg",
+      width: 720,
+      height: 480
+    },
+    momo: {
+      src: "https://i.imgur.com/cMWreAQ.jpg",
+      width: 675,
+      height: 540
+    },
+    bagel: {
+      src: "https://i.imgur.com/XpqaZM8.jpg",
+      width: 720,
+      height: 479
     }
+
     
 }
 

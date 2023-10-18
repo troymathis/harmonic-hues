@@ -1,6 +1,5 @@
 "use client";
-import { FC, useEffect, useLayoutEffect, useRef } from "react";
-import { type slide } from "./Slides";
+import { FC, useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,7 +9,7 @@ import { portImg } from "@/public/assets/PortfolioImages";
 import ImageExpand from "./ImageExpand";
 import { Mate_SC } from "next/font/google";
 import { cn } from "@/lib/utils";
-import SplitType from 'split-type'
+import SplitType from "split-type";
 
 interface PortfolioProps {}
 
@@ -49,12 +48,16 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
 
       const speedFactor = 1.4;
       let tl: any;
-      let loveWhat = new SplitType('.love-what', { types: 'chars' })
-      const lwChars = loveWhat.chars
-      let youDo = new SplitType('.you-do', { types: 'chars' })
-      const ydChars = youDo.chars
+      let loveWhat = new SplitType(".love-what", { types: "chars" });
+      const lwChars = loveWhat.chars;
+      let youDo = new SplitType(".you-do", { types: "chars" });
+      const ydChars = youDo.chars;
+      const bandText = new SplitType(".band", { types: "chars" });
+      const bChars = bandText.chars;
+      const bandText_2 = new SplitType(".band-2", {types: "chars"});
+      const bChars2 = bandText_2.chars;
 
-      var rotate = gsap.timeline({
+      gsap.timeline({
         scrollTrigger: {
           trigger: "html",
           end: "+=10000",
@@ -67,46 +70,79 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
           },
         },
       });
+      gsap.from(bChars, {
+        rotationX: 120,
+        x: 250,
+        opacity: 0,
+        duration: 5,
+        ease: "expo",
+        stagger: 0.1,
+        transformOrigin: "center center",
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=6750",
+          end: "+=3250",
+          toggleActions: "play reverse play play",
+          id: "10",
+        },
+      });
+      gsap.from(bChars2, {
+        rotationX: 120,
+        x: 250,
+        opacity: 0,
+        duration: 5,
+        ease: "expo",
+        stagger: 0.1,
+        transformOrigin: "center center",
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "+=7500",
+          end: "+=3000",
+          toggleActions: "play reverse play play",
+          id: "10",
+        },
+      });
       gsap.fromTo(
         lwChars,
-        { 
+        {
           y: 100,
-          opacity: 0
+          opacity: 0,
         },
         {
           y: 0,
           opacity: 1,
           stagger: 0.05,
-          duration: 2,
-          ease: 'power4.out',
+          duration: 1.5,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: ".portfolio",
-            start: "+=5000",
-            end: "+=2500",
+            start: "+=4000",
+            end: "+=2750",
             toggleActions: "play reverse play play",
             id: "10",
           },
-        },
-      )
+        }
+      );
       gsap.fromTo(
         ydChars,
-        { 
+        {
           y: 100,
-          opacity: 0
+          opacity: 0,
         },
         {
           y: 0,
           opacity: 1,
+          duration: 1.5,
           stagger: 0.05,
-          ease: 'power4.out',
+          ease: "power4.out",
           scrollTrigger: {
             trigger: ".portfolio",
-            start: "+=6750",
-            end: "+=2250",
+            start: "+=4500",
+            end: "+=1800",
             toggleActions: "play reverse play play",
             id: "10",
           },
-        },
+        }
       );
       gsap.to(".curved-fp", {
         opacity: 0,
@@ -114,7 +150,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         scrollTrigger: {
           trigger: ".portfolio",
           start: "+=2000",
-          end: '+=2400',
+          end: "+=2000",
           scrub: true,
           id: "1",
         },
@@ -126,7 +162,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         scrollTrigger: {
           trigger: ".portfolio",
           start: "top top",
-          end: '+=2300',
+          end: "+=2300",
           scrub: true,
           id: "1",
         },
@@ -143,7 +179,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         },
       });
       gsap.to(".box-3", {
-        y:100,
+        y: 100,
         opacity: 1,
         ease: "elastic.out(1,0.3)",
         duration: 2.5,
@@ -156,7 +192,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         },
       });
       gsap.to(".box-4", {
-        y:-100,
+        y: -100,
         opacity: 1,
         ease: "elastic.out(1,0.3)",
         duration: 2.5,
@@ -169,7 +205,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         },
       });
       gsap.to(".box-5", {
-        y:100,
+        y: 100,
         opacity: 1,
         ease: "elastic.out(1,0.3)",
         duration: 2.5,
@@ -182,7 +218,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         },
       });
       gsap.to(".box-6", {
-        y:-100,
+        y: -100,
         opacity: 1,
         ease: "elastic.out(1,0.3)",
         duration: 2.5,
@@ -195,7 +231,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         },
       });
       gsap.to(".box-7", {
-        y:100,
+        y: 100,
         opacity: 1,
         ease: "elastic.out(1,0.3)",
         duration: 2.5,
@@ -208,7 +244,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         },
       });
       gsap.to(".box-8", {
-        y:-100,
+        y: -100,
         opacity: 1,
         ease: "elastic.out(1,0.3)",
         duration: 2.5,
@@ -221,78 +257,78 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         },
       });
       gsap.to(".box-9", {
-        y:100,
+        y: 100,
         opacity: 1,
         ease: "elastic.out(1,0.3)",
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
           start: "+=2550",
-          end: "+=1500",
+          end: "+=1025",
           toggleActions: "play reverse play play",
           id: "9",
         },
       });
       gsap.to(".box-10", {
-        y:-100,
+        y: -100,
         opacity: 1,
         ease: "elastic.out(1, 0.3)",
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
           start: "+=2575",
-          end: "+=2000",
+          end: "+=1000",
           toggleActions: "play reverse play play",
           id: "10",
         },
       });
       gsap.to(".box-11", {
-        y:-100,
+        y: -100,
         opacity: 1,
         ease: "elastic.out(1, 0.3)",
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
-          start: "+=5250",
-          end: "+=2750",
+          start: "+=4000",
+          end: "+=1000",
           toggleActions: "play reverse play play",
           id: "10",
         },
       });
       gsap.to(".box-12", {
-        y:-100,
+        y: -100,
         opacity: 1,
         ease: "elastic.out(1, 0.3)",
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
-          start: "+=5375",
-          end: "+=2750",
+          start: "+=4250",
+          end: "+=1500",
           toggleActions: "play reverse play play",
           id: "10",
         },
       });
       gsap.to(".box-13", {
-        y:-100,
+        y: -100,
         opacity: 1,
         ease: "elastic.out(1, 0.3)",
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
-          start: "+=6650",
+          start: "+=4500",
           end: "+=1250",
           toggleActions: "play reverse play play",
           id: "10",
         },
       });
       gsap.to(".box-14", {
-        y:-100,
+        y: -100,
         opacity: 1,
         ease: "elastic.out(1, 0.3)",
         duration: 2.5,
         scrollTrigger: {
           trigger: ".portfolio",
-          start: "+=6750",
+          start: "+=4750",
           end: "+=1250",
           toggleActions: "play reverse play play",
           id: "10",
@@ -304,7 +340,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
 
   return (
     <div className="portfolio z-20" ref={component}>
-      <div ref={slider} className="flex flex-wrap w-[400vw] h-[100vh] ">
+      <div ref={slider} className="flex flex-wrap w-[500vw] h-[100vh]">
         <div className="description panel blue w-[100vw] h-[100vh]">
           <div className="h-full w-full p-12 flex flex-col -z-10 absolute">
             <LargeHeading
@@ -312,8 +348,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
               className="box-2 w-[600vw] overflow-visible bg-gradient-to-r -mt-10"
             >
               ONCE IN A LIFETIME • ONCE IN A LIFETIME • ONCE IN A LIFETIME •
-              ONCE IN A LIFETIME •
-              ONCE IN A LIFETIME
+              ONCE IN A LIFETIME • ONCE IN A LIFETIME
             </LargeHeading>
             {/* <LargeHeading
               size="photo"
@@ -392,8 +427,24 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         </div>
         <div className="panel orange w-[100vw] h-[100vh]">
           <div className="absolute h-screen w-full flex top-[15%] mx-16">
-          <LargeHeading size='photo' className={cn(abril.className, 'love-what relative overflow-hidden text-[10rem] bottom-[10%]')}>LOVE WHAT</LargeHeading>
-          <LargeHeading size='photo' className={cn(abril.className, 'you-do relative overflow-hidden text-[10rem] top-[60%] ')}>YOU DO</LargeHeading>
+            <LargeHeading
+              size="photo"
+              className={cn(
+                abril.className,
+                "love-what relative overflow-hidden text-[10rem] bottom-[10%]"
+              )}
+            >
+              LOVE WHAT
+            </LargeHeading>
+            <LargeHeading
+              size="photo"
+              className={cn(
+                abril.className,
+                "you-do relative overflow-hidden text-[10rem] top-[60%] "
+              )}
+            >
+              YOU DO
+            </LargeHeading>
           </div>
           <div className="w-full h-screen mt-16 mx-12 gap-4">
             {/* PLACEHOLDERS */}
@@ -423,6 +474,47 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
                 src={portImg.racecar.src}
                 width={portImg.racecar.width}
                 height={portImg.racecar.height}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="description panel purple w-[100vw] h-[100vh]">
+          <div className="absolute h-screen w-full flex flex-col items-center justify-between">
+            <LargeHeading size="photo" className="band text-[10rem]">
+              CELEBRATE
+            </LargeHeading>
+            <LargeHeading size="photo" className="band-2 text-[10rem]">
+              LOVE
+            </LargeHeading>
+          </div>
+          <div className="w-full h-screen relative">
+            {/* PLACEHOLDERS */}
+            <div className="absolute top-1/4 left-[30%]">
+              <ImageExpand
+                src={portImg.puppies.src}
+                width={portImg.puppies.width}
+                height={portImg.puppies.height}
+              />
+            </div>
+            <div className="absolute scale-90 left-[65%] top-[35%]">
+              <ImageExpand
+                src={portImg.momo.src}
+                width={portImg.momo.width}
+                height={portImg.momo.height}
+              />
+            </div>
+            <div className="absolute scale-75 top-[13%] left-[3%]">
+              <ImageExpand
+                src={portImg.doodle.src}
+                width={portImg.doodle.width}
+                height={portImg.doodle.height}
+              />
+            </div>
+            <div className="absolute top-1/2 scale-75">
+              <ImageExpand
+                src={portImg.bagel.src}
+                width={portImg.bagel.width}
+                height={portImg.bagel.height}
               />
             </div>
           </div>

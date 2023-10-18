@@ -16,21 +16,10 @@ interface ImageExpandProps {
 }
 
 const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) => {
-  return (
-    <Dialog>
-      <DialogTrigger className={cn("hover:opacity-80 transition-all", className)}>
-        <Image
-          src={src}
-          priority
-          alt={src}
-          quality={100}
-          width={width}
-          height={height}
-
-        />
-      </DialogTrigger>
-      <DialogContent>
-        <DialogDescription>
+  if(width < 400) {
+    return (
+      <Dialog>
+        <DialogTrigger className={cn("hover:opacity-80 transition-all", className)}>
           <Image
             src={src}
             priority
@@ -38,12 +27,54 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
             quality={100}
             width={width}
             height={height}
-            className="scale-[1.5] w-full h-auto"
+  
           />
-        </DialogDescription>
-      </DialogContent>
-    </Dialog>
-  );
+        </DialogTrigger>
+        <DialogContent>
+          <DialogDescription>
+            <Image
+              src={src}
+              priority
+              alt={src}
+              quality={100}
+              width={width}
+              height={height}
+              className="scale-[1.5] w-full h-auto"
+            />
+          </DialogDescription>
+        </DialogContent>
+      </Dialog>
+    )
+  } else {
+    return (
+      <Dialog>
+        <DialogTrigger className={cn("hover:opacity-80 transition-all", className)}>
+          <Image
+            src={src}
+            priority
+            alt={src}
+            quality={100}
+            width={width}
+            height={height}
+  
+          />
+        </DialogTrigger>
+        <DialogContent>
+          <DialogDescription>
+            <Image
+              src={src}
+              priority
+              alt={src}
+              quality={100}
+              width={width}
+              height={height}
+              className="scale-[2] w-full h-auto"
+            />
+          </DialogDescription>
+        </DialogContent>
+      </Dialog>
+    )
+  }
 };
 
 export default ImageExpand;
