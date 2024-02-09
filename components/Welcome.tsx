@@ -42,7 +42,7 @@ const Welcome: FC<WelcomeProps> = ({ slides }) => {
       <Navbar />
       <Logo />
       <div>
-        <EmblaCarousel data-scroll data-scroll-speed="2">
+        <EmblaCarousel data-scroll data-scroll-speed="2" className="h-full w-full fixed top-0 left-0 opacity-30 z-10">
           {slides.map((src, i) => {
             return (
               <div key={i} className="relative h-screen flex-[0_0_100%]">

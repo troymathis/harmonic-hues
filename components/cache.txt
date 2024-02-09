@@ -91,3 +91,112 @@
           width={550}
           height={300}
         />
+--------------------------------------------------
+<div className="gallery h-full w-screen flex flex-wrap gap-4 justify-center">
+        
+        <hr />
+        <ImageExpand
+          src={portImg.kim.src}
+          width={portImg.kim.width}
+          height={portImg.kim.height}
+          className="w-[35%]"
+        />
+
+        <ImageExpand
+          src={portImg.lucas.src}
+          width={portImg.lucas.width}
+          height={portImg.lucas.height}
+          className="w-[35%]"
+        />
+
+        <ImageExpand
+          src={portImg.abigail.src}
+          width={portImg.abigail.width}
+          height={portImg.abigail.height}
+          className="w-[35%]"
+        />
+        <ImageExpand
+          src={portImg.andrea.src}
+          width={portImg.andrea.width}
+          height={portImg.andrea.height}
+          className="w-[35%]"
+        />
+
+        <ImageExpand
+          src={portImg.nightwing.src}
+          width={portImg.nightwing.width}
+          height={portImg.nightwing.height}
+          className="w-[35%]"
+        />
+
+        <ImageExpand
+          src={portImg.champloo.src}
+          width={portImg.champloo.width}
+          height={portImg.champloo.height}
+          className="w-[35%]"
+        />
+
+        <ImageExpand
+          src={portImg.pink.src}
+          width={portImg.pink.width}
+          height={portImg.pink.height}
+          className="w-[35%]"
+        />
+
+        <ImageExpand
+          src={portImg.shock.src}
+          width={portImg.shock.width}
+          height={portImg.shock.height}
+          className="w-[35%]"
+        />
+        <ImageExpand
+          src={portImg.extporsche.src}
+          width={portImg.extporsche.width}
+          height={portImg.extporsche.height}
+          className="w-[35%]"
+        />
+
+        <ImageExpand
+          src={portImg.lambo.src}
+          width={portImg.lambo.width}
+          height={portImg.lambo.height}
+          className="w-[35%]"
+        />
+        <ImageExpand
+          src={portImg.lambodoor.src}
+          width={portImg.lambodoor.width}
+          height={portImg.lambodoor.height}
+          className="w-[35%]"
+        />
+
+        <ImageExpand
+          src={portImg.racecar.src}
+          width={portImg.racecar.width}
+          height={portImg.racecar.height}
+          className="w-[35%]"
+        />
+        <ImageExpand
+          src={portImg.puppies.src}
+          width={portImg.puppies.width}
+          height={portImg.puppies.height}
+          className="w-[35%]"
+        />
+        <ImageExpand
+          src={portImg.momo.src}
+          width={portImg.momo.width}
+          height={portImg.momo.height}
+          className="w-[35%]"
+        />
+        <ImageExpand
+          src={portImg.doodle.src}
+          width={portImg.doodle.width}
+          height={portImg.doodle.height}
+          className="w-[35%]"
+        />
+        <ImageExpand
+          src={portImg.bagel.src}
+          width={portImg.bagel.width}
+          height={portImg.bagel.height}
+          className="w-[35%]"
+        />
+      </div>

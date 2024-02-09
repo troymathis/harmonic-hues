@@ -38,7 +38,7 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
               quality={100}
               width={width}
               height={height}
-              className="xl:scale-[1.5] w-full h-auto"
+              className="scale-[1.5] w-full h-auto"
             />
           </DialogDescription>
         </DialogContent>
@@ -55,7 +55,6 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
             quality={100}
             width={width}
             height={height}
-  
           />
         </DialogTrigger>
         <DialogContent>
@@ -67,7 +66,7 @@ const ImageExpand: FC<ImageExpandProps> = ({ src, width, height, className }) =>
               quality={100}
               width={width}
               height={height}
-              className="xl:scale-[2] w-full h-auto"
+              className="scale-[2] w-full h-auto"
             />
           </DialogDescription>
         </DialogContent>

@@ -6,9 +6,12 @@ import Autoplay from 'embla-carousel-autoplay'
 import { type slide } from './Slides'
 import Image from 'next/image'
 import { PropsWithChildren } from 'react'
+import { cn } from '@/lib/utils'
 
 
-type Props = PropsWithChildren 
+interface Props extends PropsWithChildren {
+  className: string
+}
 
 const OPTIONS: EmblaOptionsType = {dragFree: true, containScroll: 'trimSnaps', loop: true }
 const AUTOPLAYOPTIONS = {
@@ -16,12 +19,12 @@ const AUTOPLAYOPTIONS = {
   jump: false
 }
 
-export const EmblaCarousel = ({children}: Props) => {
+export const EmblaCarousel: FC<Props> = ({children, className}) => {
 
 const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [Autoplay(AUTOPLAYOPTIONS)])
 
   return (
-    <div  className="embla overflow-hidden h-full w-full fixed top-0 left-0 opacity-30 z-10"  ref={emblaRef}>
+    <div  className={cn(className, "embla overflow-hidden")}  ref={emblaRef}>
       <div className='flex'>{children}</div>
     </div>
   )

@@ -290,7 +290,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         scrollTrigger: {
           trigger: ".portfolio",
           start: "+=4000",
-          end: "+=1500",
+          end: "+=1675",
           toggleActions: "play reverse play play",
           id: "10",
         },
@@ -329,7 +329,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
         scrollTrigger: {
           trigger: ".portfolio",
           start: "+=4350",
-          end: "+=1250",
+          end: "+=1575",
           toggleActions: "play reverse play play",
           id: "10",
         },
@@ -418,14 +418,14 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
                 height={portImg.kim.height}
               />
             </div>
-            <div className="box-4 opacity-0 absolute scale-[1] left-1/2 top-1/4">
+            <div className="box-4 opacity-0 absolute left-1/2 top-1/4">
               <ImageExpand
                 src={portImg.lucas.src}
                 width={portImg.lucas.width}
                 height={portImg.lucas.height}
               />
             </div>
-            <div className="box-5 opacity-0 absolute scale-[1] left-1/3 top-1/3">
+            <div className="box-5 opacity-0 absolute left-1/3 top-1/3">
               <ImageExpand
                 src={portImg.abigail.src}
                 width={portImg.abigail.width}
@@ -541,7 +541,7 @@ const Portfolio: FC<PortfolioProps> = ({}) => {
           </div>
           <div className="w-full h-screen">
             {/* PLACEHOLDERS */}
-            <div className="box-15 opacity-0 absolute top-[20%] left-[30%]">
+            <div className="box-15 opacity-0 absolute top-[17%] left-[30%]">
               <ImageExpand
                 src={portImg.puppies.src}
                 width={portImg.puppies.width}
