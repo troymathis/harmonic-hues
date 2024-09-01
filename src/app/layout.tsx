@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const gambarino = localFont({
-  src: "../",
+  src: "../../public/fonts/gambarino.ttf",
   variable: "--font-gambarino",
 });
 
